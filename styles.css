@@ -102,6 +102,12 @@ main {
 
 .detailed-card {
     max-width: none;
+    width: 100%;
+}
+
+.services-grid:has(.detailed-card) {
+    grid-template-columns: 1fr;
+    max-width: none;
 }
 
 #searchInput {
@@ -153,10 +159,18 @@ main {
 
 .services-table-container {
     margin-top: 1rem;
-    max-height: 400px;
-    overflow-y: auto;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+}
+
+.detailed-card .services-table-container {
+    max-height: none;
+    overflow-y: visible;
+}
+
+.detailed-card .services-table {
+    width: 100%;
+    table-layout: auto;
 }
 
 .references {
