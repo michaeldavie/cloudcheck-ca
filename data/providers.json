@@ -1,0 +1,6 @@
+[
+    "aws.json",
+    "microsoft.json",
+    "google.json",
+    "snowflake.json"
+]

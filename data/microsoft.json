@@ -1,0 +1,827 @@
+{
+    "name": "Microsoft (Azure, Dynamics 365, Microsoft 365 & Power Platform)",
+    "provider": "Microsoft",
+    "type": "CSP",
+    "status": "assessed",
+    "servicesInScope": {
+        "AI Builder": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Bot Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Services": [
+            "Medium"
+        ],
+        "Azure AI Content Safety": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Custom Vision": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Metrics Advisor": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Personalizer": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Search": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Translator": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Vision": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Foundry Portal": [
+            "Medium"
+        ],
+        "Machine Learning Studio": [
+            "Medium"
+        ],
+        "Microsoft 365 Copilot for Sales": [
+            "Medium"
+        ],
+        "Microsoft Genomics": [
+            "Medium"
+        ],
+        "Seeing AI": [
+            "Medium"
+        ],
+        "Anomaly Detector": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Conversational Language Understanding": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Document Intelligence": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Immersive Reader": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Language": [
+            "Medium"
+        ],
+        "Azure AI Question Answering": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Speech": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure AI Video Indexer": [
+            "Medium",
+            "HVA"
+        ],
+        "Face": [
+            "Medium",
+            "HVA"
+        ],
+        "AI Health Bot": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Machine Learning": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Open Datasets": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure OpenAI Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Data Explorer": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Data Factory": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Data Share": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure HDInsight": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Stream Analytics": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Fabric": [
+            "Medium"
+        ],
+        "Power BI Embedded": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Chaos Studio": [
+            "Medium"
+        ],
+        "Azure Operator Insights": [
+            "Medium"
+        ],
+        "Data Catalog": [
+            "Medium"
+        ],
+        "Data Lake Analytics": [
+            "Medium"
+        ],
+        "App Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Arc-enabled Servers": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Functions": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Service Fabric": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Spring Apps": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Virtual Desktop": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure VM Image Builder": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Large Instances": [
+            "Medium"
+        ],
+        "Azure VMWare Solution": [
+            "Medium"
+        ],
+        "Batch": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Machine Configuration": [
+            "Medium",
+            "HVA"
+        ],
+        "Planned Maintenance": [
+            "Medium",
+            "HVA"
+        ],
+        "Virtual Machine (VM) Scale Sets": [
+            "Medium",
+            "HVA"
+        ],
+        "Virtual Machines": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Arc-enabled Kubernetes": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Container Apps": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Container Registry": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Kubernetes Service (AKS)": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Red Hat OpenShift (ARO)": [
+            "Medium",
+            "HVA"
+        ],
+        "Container Instances": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Kubernetes Configuration Management": [
+            "Medium"
+        ],
+        "Azure Cache for Redis": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Cosmos DB": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Database for MariaDB": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Database for MySQL": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Database for PostgreSQL": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Database Migration Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Health Data Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure SQL Database": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Synapse Analytics": [
+            "Medium",
+            "HVA"
+        ],
+        "SQL Server Stretch Database": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure SQL Managed Instance": [
+            "Medium"
+        ],
+        "Microsoft Azure Managed Instance for Apache Cassandra": [
+            "Medium"
+        ],
+        "SQL Managed Instance enabled by Azure Arc": [
+            "Medium"
+        ],
+        "SQL Server enabled by Azure Arc": [
+            "Medium"
+        ],
+        "SQL Server on Azure Virtual Machines": [
+            "Medium"
+        ],
+        "Azure App Configuration": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure DevOps": [
+            "Medium"
+        ],
+        "Azure DevTest Labs": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Lab Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Deployment Environments": [
+            "Medium"
+        ],
+        "Azure Load Testing": [
+            "Medium"
+        ],
+        "Microsoft Dev Box": [
+            "Medium"
+        ],
+        "Service Connector": [
+            "Medium"
+        ],
+        "Chat for Dynamics 365": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Commerce": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Customer Insights \u2013 Data": [
+            "Medium"
+        ],
+        "Dynamics 365 Customer Insights \u2013 Journeys": [
+            "Medium"
+        ],
+        "Dynamics 365 Customer Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Customer Voice": [
+            "Medium"
+        ],
+        "Dynamics 365 Field Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Finance": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Fraud Protection": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Guides": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Human Resources": [
+            "Medium"
+        ],
+        "Dynamics 365 Intelligent Order Management": [
+            "Medium"
+        ],
+        "Dynamics 365 Project Operations": [
+            "Medium"
+        ],
+        "Dynamics 365 Remote Assist": [
+            "Medium"
+        ],
+        "Dynamics 365 Sales": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Sales Professional": [
+            "Medium",
+            "HVA"
+        ],
+        "Dynamics 365 Supply Chain Management": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Defender for IoT": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure IoT Hub": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Sphere": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Time Series Insights": [
+            "Medium",
+            "HVA"
+        ],
+        "Event Grid": [
+            "Medium",
+            "HVA"
+        ],
+        "Event Hubs": [
+            "Medium",
+            "HVA"
+        ],
+        "Notification Hubs": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Digital Twins": [
+            "Medium"
+        ],
+        "Azure IoT Central": [
+            "Medium"
+        ],
+        "Automation": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Advisor": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Blueprints": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Lighthouse": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Managed Applications": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Managed Grafana": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Migrate": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Monitor": [
+            "Medium",
+            "HVA"
+        ],
+        "Application Change Analysis": [
+            "Medium"
+        ],
+        "Azure Quotas": [
+            "Medium"
+        ],
+        "Azure Resource Mover": [
+            "Medium"
+        ],
+        "Azure Signup Portal": [
+            "Medium"
+        ],
+        "Azure Policy": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Resource Graph": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Resource Manager (ARM)": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Shell": [
+            "Medium",
+            "HVA"
+        ],
+        "Cost Management": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Azure Portal": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Purview": [
+            "Medium",
+            "HVA"
+        ],
+        "Application Gateway": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Bastion": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure DDoS Protection": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure DNS": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure ExpressRoute": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Firewall": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Firewall Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Front Door": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure NAT Gateway": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Private Link": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Route Server": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Web Application Firewall": [
+            "Medium",
+            "HVA"
+        ],
+        "Content Delivery Network": [
+            "Medium",
+            "HVA"
+        ],
+        "IP Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Load Balancer": [
+            "Medium",
+            "HVA"
+        ],
+        "Network Watcher": [
+            "Medium",
+            "HVA"
+        ],
+        "Traffic Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Virtual Network": [
+            "Medium",
+            "HVA"
+        ],
+        "Virtual WAN": [
+            "Medium",
+            "HVA"
+        ],
+        "VPN Gateway": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Communications Gateway": [
+            "Medium"
+        ],
+        "Azure Internet Analyzer": [
+            "Medium"
+        ],
+        "Azure Peering Service": [
+            "Medium"
+        ],
+        "Azure Traffic Collector": [
+            "Medium"
+        ],
+        "Azure Virtual Network Manager": [
+            "Medium"
+        ],
+        "Power Apps": [
+            "Medium",
+            "HVA"
+        ],
+        "Power Automate": [
+            "Medium",
+            "HVA"
+        ],
+        "Power BI": [
+            "Medium",
+            "HVA"
+        ],
+        "Power Pages": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Active Directory B2C": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Dedicated HSM": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Information Protection": [
+            "Medium",
+            "HVA"
+        ],
+        "Customer Lockbox for Microsoft Azure": [
+            "Medium",
+            "HVA"
+        ],
+        "Key Vault": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Azure Attestation": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Defender for Cloud": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Entra Domain Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Entra ID": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Sentinel": [
+            "Medium",
+            "HVA"
+        ],
+        "Multi-Factor Authentication": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Confidential Ledger": [
+            "Medium"
+        ],
+        "Azure Payment HSM": [
+            "Medium"
+        ],
+        "Microsoft Copilot for Security": [
+            "Medium"
+        ],
+        "Microsoft Defender Experts for Hunting": [
+            "Medium"
+        ],
+        "Microsoft Defender Experts for XDR": [
+            "Medium"
+        ],
+        "Microsoft Defender Threat Intelligence": [
+            "Medium"
+        ],
+        "Microsoft Global Secure Access": [
+            "Medium"
+        ],
+        "Windows Autopatch": [
+            "Medium"
+        ],
+        "Azure Archive Storage": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Backup": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Data Box": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure File Sync": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure HPC Cache": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure NetApp Files": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Site Recovery": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Storage": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Managed Lustre": [
+            "Medium"
+        ],
+        "Azure Storage Mover": [
+            "Medium"
+        ],
+        "API Management": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Fluid Relay": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Maps": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Media Services": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure SignalR Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Web PubSub": [
+            "Medium",
+            "HVA"
+        ],
+        "Defender for Cloud Apps": [
+            "Medium",
+            "HVA"
+        ],
+        "Defender for Endpoint": [
+            "Medium",
+            "HVA"
+        ],
+        "Defender for Identity": [
+            "Medium",
+            "HVA"
+        ],
+        "Azure Data Manager for Energy": [
+            "Medium"
+        ],
+        "Microsoft Graph": [
+            "Medium"
+        ],
+        "Microsoft Stream": [
+            "Medium"
+        ],
+        "Universal Print": [
+            "Medium"
+        ],
+        "Logic Apps": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Copilot Studio": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Dataverse": [
+            "Medium",
+            "HVA"
+        ],
+        "Microsoft Intune": [
+            "Medium",
+            "HVA"
+        ],
+        "Service Bus": [
+            "Medium",
+            "HVA"
+        ],
+        "Advanced eDiscovery": [
+            "Medium"
+        ],
+        "Defender for O365": [
+            "Medium"
+        ],
+        "Exchange Online (EXO)": [
+            "Medium"
+        ],
+        "Microsoft Planner": [
+            "Medium"
+        ],
+        "Microsoft Teams": [
+            "Medium"
+        ],
+        "Office 365": [
+            "Medium"
+        ],
+        "OneDrive": [
+            "Medium"
+        ],
+        "Phone System & Calling": [
+            "Medium"
+        ],
+        "SharePoint Online": [
+            "Medium"
+        ],
+        "SharePoint Syntex": [
+            "Medium"
+        ],
+        "Viva Insights": [
+            "Medium"
+        ],
+        "Viva Learning": [
+            "Medium"
+        ],
+        "Viva Topics": [
+            "Medium"
+        ],
+        "Win365": [
+            "Medium"
+        ],
+        "Microsoft Priva": [
+            "Medium"
+        ],
+        "Viva Connections": [
+            "Medium"
+        ],
+        "Viva Engage": [
+            "Medium"
+        ]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "assessmentReport": "https://servicetrust.microsoft.com/ViewPage/RegionalCanada",
+        "providerReference": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-cccs-medium"
+    }
+}

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.back-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background: #5a67d8;
+}
+
+.summary-card {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.summary-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 0.25rem;
+}
+
+.view-details {
+    color: #667eea;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.detailed-card {
+    max-width: none;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+.service-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.service-provider {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.underlying-csp {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.services-table-container {
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.references {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.references strong {
+    color: #2c3e50;
+    margin-right: 0.5rem;
+}
+
+.references a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+}
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.services-table th,
+.services-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.services-table th:nth-child(2),
+.services-table th:nth-child(3),
+.services-table td:nth-child(2),
+.services-table td:nth-child(3) {
+    text-align: center;
+    width: 80px;
+}
+
+.services-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.services-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.service-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-assessed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
