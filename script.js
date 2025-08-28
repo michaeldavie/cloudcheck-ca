@@ -80,8 +80,9 @@ function createServiceCard(service) {
     serviceCard.className = 'service-card summary-card';
     serviceCard.onclick = () => showDetailView(service);
 
+    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
     const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">Underlying CSP: ${service.underlyingCSP.join(', ')}</div>` : '';
+        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     serviceCard.innerHTML = `
         <div class="service-name">${service.name}</div>
@@ -121,8 +122,9 @@ function renderDetailedService(service) {
     const serviceCard = document.createElement('div');
     serviceCard.className = 'service-card detailed-card';
 
+    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
     const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">Underlying CSP: ${service.underlyingCSP.join(', ')}</div>` : '';
+        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     const tableRows = Object.entries(service.servicesInScope)
         .sort(([a], [b]) => a.localeCompare(b))
@@ -247,8 +249,9 @@ function renderFilteredDetail(service, searchTerm) {
     const serviceCard = document.createElement('div');
     serviceCard.className = 'service-card detailed-card';
 
+    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
     const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">Underlying CSP: ${service.underlyingCSP.join(', ')}</div>` : '';
+        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     const tableRows = filtered
         .sort(([a], [b]) => a.localeCompare(b))
