@@ -1,0 +1,17 @@
+{
+    "name": "SAP",
+    "provider": "SAP",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "SAP Business Technology Platform": ["Medium"],
+        "SAP Data Custodian (AWS only)": ["Medium"]
+    },
+    "underlyingCSP": ["AWS", "Azure"],
+    "references": {
+        "providerReference": [
+            "https://www.sap.com/croatia/about/trust-center/certification-compliance/sap-business-technology-platform-canadian-centre-for-cyber-secur.html",
+            "https://www.sap.com/about/trust-center/certification-compliance/sap-data-custodian-canadian-centre-for-cyber-security--cccs--clo.html"
+    ]
+    }
+}

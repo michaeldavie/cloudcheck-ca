@@ -1,11 +1,13 @@
 [
-    "aws.json",
-    "appian.json",
-    "google.json",
-    "ibm.json",
-    "microsoft.json",
-    "opentext.json",
-    "redhat.json",
-    "salesforce.json",
-    "snowflake.json"
+    "aws",
+    "appian",
+    "google",
+    "ibm",
+    "microsoft",
+    "netskope",
+    "opentext",
+    "redhat",
+    "salesforce",
+    "sap",
+    "snowflake"
 ]

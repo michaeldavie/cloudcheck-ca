@@ -9,7 +9,7 @@ async function loadProviderData() {
         const providerFiles = await response.json();
 
         const promises = providerFiles.map(async (file) => {
-            const providerResponse = await fetch(`./data/${file}${cacheBuster}`);
+            const providerResponse = await fetch(`./data/${file}.json${cacheBuster}`);
             return await providerResponse.json();
         });
 
@@ -143,7 +143,13 @@ function renderDetailedService(service) {
             links.push(`<a href="${service.references.assessmentReport}" target="_blank" rel="noopener">Assessment Report</a>`);
         }
         if (service.references.providerReference) {
-            links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
+            if (Array.isArray(service.references.providerReference)) {
+                service.references.providerReference.forEach((link, index) => {
+                    links.push(`<a href="${link}" target="_blank" rel="noopener">Provider Reference ${index + 1}</a>`);
+                });
+            } else {
+                links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
+            }
         }
         if (links.length > 0) {
             referencesHtml = `<div class="references">
@@ -263,7 +269,13 @@ function renderFilteredDetail(service, searchTerm) {
             links.push(`<a href="${service.references.assessmentReport}" target="_blank" rel="noopener">Assessment Report</a>`);
         }
         if (service.references.providerReference) {
-            links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
+            if (Array.isArray(service.references.providerReference)) {
+                service.references.providerReference.forEach((link, index) => {
+                    links.push(`<a href="${link}" target="_blank" rel="noopener">Provider Reference ${index + 1}</a>`);
+                });
+            } else {
+                links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
+            }
         }
         if (links.length > 0) {
             referencesHtml = `<div class="references">
