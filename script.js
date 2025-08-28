@@ -125,6 +125,7 @@ function renderDetailedService(service) {
         `<div class="underlying-csp">Underlying CSP: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     const tableRows = Object.entries(service.servicesInScope)
+        .sort(([a], [b]) => a.localeCompare(b))
         .map(([serviceName, levels]) => {
             const hasMedium = levels.includes('Medium') ? '✓' : '';
             const hasHVA = levels.includes('HVA') ? '✓' : '';
@@ -244,6 +245,7 @@ function renderFilteredDetail(service, searchTerm) {
         `<div class="underlying-csp">Underlying CSP: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     const tableRows = filtered
+        .sort(([a], [b]) => a.localeCompare(b))
         .map(([serviceName, levels]) => {
             const hasMedium = levels.includes('Medium') ? '✓' : '';
             const hasHVA = levels.includes('HVA') ? '✓' : '';
