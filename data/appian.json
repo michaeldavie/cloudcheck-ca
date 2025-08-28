@@ -1,0 +1,13 @@
+{
+    "name": "Appian",
+    "provider": "Appian",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Appian": ["Medium"]
+    },
+    "underlyingCSP": ["AWS"],
+    "references": {
+        "providerReference": "https://appian.com/support/resources/trust/compliance"
+    }
+}

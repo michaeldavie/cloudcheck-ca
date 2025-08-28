@@ -123,7 +123,7 @@ main {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
@@ -251,6 +251,18 @@ footer {
     margin-top: 3rem;
 }
 
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -259,4 +271,27 @@ footer {
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
+/* Services section layout */
+#servicesList {
+    display: block;
+}
+
+/* Provider category styles */
+.provider-category {
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.provider-category:last-child {
+    margin-bottom: 0;
 }

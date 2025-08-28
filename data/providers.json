@@ -1,6 +1,11 @@
 [
     "aws.json",
-    "microsoft.json",
+    "appian.json",
     "google.json",
+    "ibm.json",
+    "microsoft.json",
+    "opentext.json",
+    "redhat.json",
+    "salesforce.json",
     "snowflake.json"
 ]
