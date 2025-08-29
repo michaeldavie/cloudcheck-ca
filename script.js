@@ -90,7 +90,7 @@ function createServiceCard(service) {
         <div class="summary-stats">
             <div class="stat">
                 <span class="stat-number">${serviceCount}</span>
-                <span class="stat-label">Services Assessed</span>
+                <span class="stat-label">Medium Services</span>
             </div>
             <div class="stat">
                 <span class="stat-number">${hvaSevices}</span>
