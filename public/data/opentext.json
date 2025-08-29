@@ -1,0 +1,13 @@
+{
+    "name": "OpenText",
+    "provider": "OpenText",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "OpenText": ["Medium"]
+    },
+    "underlyingCSP": ["AWS"],
+    "references": {
+        "providerReference": "https://www.opentext.com/solutions/industry/government"
+    }
+}

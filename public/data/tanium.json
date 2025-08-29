@@ -1,0 +1,13 @@
+{
+    "name": "Tanium",
+    "provider": "Tanium",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Tanium": ["Medium"]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "providerReference": "https://www.tanium.com/press-releases/tanium-earns-protected-b-status-by-the-government-of-canada/"
+    }
+}

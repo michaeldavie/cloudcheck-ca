@@ -1,0 +1,13 @@
+{
+    "name": "Netskope",
+    "provider": "Netskope",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Netskope NewEdge": ["Medium"]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "providerReference": "https://www.netskope.com/press-releases/netskope-earns-protected-b-certification-by-the-government-of-canada"
+    }
+}

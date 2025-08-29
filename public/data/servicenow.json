@@ -1,0 +1,13 @@
+{
+    "name": "ServiceNow",
+    "provider": "ServiceNow",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "ServiceNow": ["Medium"]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "providerReference": "https://trust.servicenow.com/certifications/gc_cp"
+    }
+}

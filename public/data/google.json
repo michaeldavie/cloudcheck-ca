@@ -1,0 +1,641 @@
+{
+    "name": "Google Cloud Platform",
+    "provider": "Google",
+    "type": "CSP",
+    "status": "assessed",
+    "servicesInScope": {
+        "AI Platform Data Labeling": [
+            "Medium",
+            "HVA"
+        ],
+        "AI Platform Neural Architecture Search": [
+            "Medium",
+            "HVA"
+        ],
+        "AI Platform Training and Prediction": [
+            "Medium",
+            "HVA"
+        ],
+        "AutoML Natural Language": [
+            "Medium",
+            "HVA"
+        ],
+        "AutoML Tables": [
+            "Medium",
+            "HVA"
+        ],
+        "AutoML Translation": [
+            "Medium",
+            "HVA"
+        ],
+        "AutoML Video": [
+            "Medium",
+            "HVA"
+        ],
+        "AutoML Vision": [
+            "Medium",
+            "HVA"
+        ],
+        "Contact Center AI": [
+            "Medium",
+            "HVA"
+        ],
+        "Dialogflow": [
+            "Medium",
+            "HVA"
+        ],
+        "Document AI": [
+            "Medium",
+            "HVA"
+        ],
+        "Generative AI on Vertex AI": [
+            "Medium"
+        ],
+        "Notebooks": [
+            "Medium",
+            "HVA"
+        ],
+        "Text-to-Speech": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex AI Forecast": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex AI Model Registry": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex AI Search": [
+            "Medium"
+        ],
+        "Vertex ML Metadata": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex Model Monitoring": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex Online and Batch Prediction": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex Pipelines": [
+            "Medium",
+            "HVA"
+        ],
+        "Vertex Training": [
+            "Medium",
+            "HVA"
+        ],
+        "BigQuery": [
+            "Medium",
+            "HVA"
+        ],
+        "BigQuery Data Transfer Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Bigtable": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Functions": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Run (fully managed)": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Run for Anthos": [
+            "Medium",
+            "HVA"
+        ],
+        "Apigee": [
+            "Medium",
+            "HVA"
+        ],
+        "App Engine": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Build": [
+            "Medium",
+            "HVA"
+        ],
+        "Compute Engine": [
+            "Medium",
+            "HVA"
+        ],
+        "Container Registry": [
+            "Medium",
+            "HVA"
+        ],
+        "GKE Hub": [
+            "Medium",
+            "HVA"
+        ],
+        "Google Kubernetes Engine": [
+            "Medium",
+            "HVA"
+        ],
+        "VM Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Data Fusion": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Functions for Firebase": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud SQL": [
+            "Medium",
+            "HVA"
+        ],
+        "Data Catalog": [
+            "Medium",
+            "HVA"
+        ],
+        "Database Migration Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Datastore": [
+            "Medium",
+            "HVA"
+        ],
+        "DataStream": [
+            "Medium",
+            "HVA"
+        ],
+        "Memorystore": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Composer": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud SDK": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Shell": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Source Repositories": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Translation": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Vision": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Workstations": [
+            "Medium",
+            "HVA"
+        ],
+        "Dataflow": [
+            "Medium",
+            "HVA"
+        ],
+        "Eventarc": [
+            "Medium",
+            "HVA"
+        ],
+        "Anthos Config Management (ACM)": [
+            "Medium",
+            "HVA"
+        ],
+        "Anthos Service Mesh": [
+            "Medium",
+            "HVA"
+        ],
+        "Artifact Registry": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Asset Inventory": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Billing": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Deployment Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Endpoints": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Logging": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Monitoring": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Profiler": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Scheduler": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Tasks": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Trace": [
+            "Medium",
+            "HVA"
+        ],
+        "Insights": [
+            "Medium",
+            "HVA"
+        ],
+        "Looker Studio": [
+            "Medium",
+            "HVA"
+        ],
+        "Traffic Director": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud CDN": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud DNS": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Interconnect": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Load Balancing": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud NAT": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Router": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud VPN": [
+            "Medium",
+            "HVA"
+        ],
+        "Google Cloud Armor": [
+            "Medium",
+            "HVA"
+        ],
+        "Network Connectivity Center": [
+            "Medium",
+            "HVA"
+        ],
+        "Network Intelligence Center": [
+            "Medium",
+            "HVA"
+        ],
+        "Network Service Tiers": [
+            "Medium",
+            "HVA"
+        ],
+        "Virtual Private Cloud (VPC)": [
+            "Medium",
+            "HVA"
+        ],
+        "VPC Service Controls": [
+            "Medium",
+            "HVA"
+        ],
+        "Access Approval": [
+            "Medium",
+            "HVA"
+        ],
+        "Access Context Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Access Transparency": [
+            "Medium",
+            "HVA"
+        ],
+        "Admin Console": [
+            "Medium",
+            "HVA"
+        ],
+        "Anthos Identity Service (AIS)": [
+            "Medium",
+            "HVA"
+        ],
+        "Assured Workloads": [
+            "Medium",
+            "HVA"
+        ],
+        "BeyondCorp Enterprise": [
+            "Medium",
+            "HVA"
+        ],
+        "Binary Authorization": [
+            "Medium",
+            "HVA"
+        ],
+        "Certificate Authority Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Chronicle": [
+            "Medium",
+            "HVA"
+        ],
+        "Chronicle SOAR": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Console": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Console App": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Data Loss Prevention": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud External Key Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud HSM": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Identity": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Identity-Aware Proxy": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud IDS": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Key Management Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Connect": [
+            "Medium",
+            "HVA"
+        ],
+        "Firebase Authentication": [
+            "Medium",
+            "HVA"
+        ],
+        "Identity & Access Management": [
+            "Medium",
+            "HVA"
+        ],
+        "Identity Platform": [
+            "Medium",
+            "HVA"
+        ],
+        "Key Access Justification": [
+            "Medium",
+            "HVA"
+        ],
+        "reCAPTCHA Enterprise": [
+            "Medium",
+            "HVA"
+        ],
+        "Secret Manager": [
+            "Medium",
+            "HVA"
+        ],
+        "Security Command Center": [
+            "Medium",
+            "HVA"
+        ],
+        "Service Directory": [
+            "Medium",
+            "HVA"
+        ],
+        "Service Infrastructure": [
+            "Medium",
+            "HVA"
+        ],
+        "Workforce Identity Federation": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Filestore": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Spanner": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Storage": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Storage for Firebase": [
+            "Medium",
+            "HVA"
+        ],
+        "Firestore": [
+            "Medium",
+            "HVA"
+        ],
+        "Persistent Disk": [
+            "Medium",
+            "HVA"
+        ],
+        "Storage Transfer Service": [
+            "Medium",
+            "HVA"
+        ],
+        "Classroom": [
+            "Medium"
+        ],
+        "Cloud Search": [
+            "Medium"
+        ],
+        "Gemini for Google Workspace": [
+            "Medium"
+        ],
+        "Gmail": [
+            "Medium"
+        ],
+        "Gmail REST API": [
+            "Medium"
+        ],
+        "Google Calendar": [
+            "Medium"
+        ],
+        "Google Calendar API": [
+            "Medium"
+        ],
+        "Google Chat": [
+            "Medium"
+        ],
+        "Google Contacts": [
+            "Medium"
+        ],
+        "Google Docs": [
+            "Medium"
+        ],
+        "Google Drive": [
+            "Medium"
+        ],
+        "Google Drive Activity API": [
+            "Medium"
+        ],
+        "Google Drive REST API": [
+            "Medium"
+        ],
+        "Google Forms": [
+            "Medium"
+        ],
+        "Google Groups": [
+            "Medium"
+        ],
+        "Google Jamboard": [
+            "Medium"
+        ],
+        "Google Keep": [
+            "Medium"
+        ],
+        "Google Meet": [
+            "Medium"
+        ],
+        "Google Mobile Device Management": [
+            "Medium"
+        ],
+        "Google People API": [
+            "Medium"
+        ],
+        "Google Sheets": [
+            "Medium"
+        ],
+        "Google Sheets API": [
+            "Medium"
+        ],
+        "Google Sites": [
+            "Medium"
+        ],
+        "Google Slides": [
+            "Medium"
+        ],
+        "Google Tasks": [
+            "Medium"
+        ],
+        "Google Tasks API": [
+            "Medium"
+        ],
+        "Google Vault": [
+            "Medium"
+        ],
+        "Google Vids": [
+            "Medium"
+        ],
+        "Google Voice": [
+            "Medium"
+        ],
+        "Google Workspace Migrate": [
+            "Medium"
+        ],
+        "Care Studio": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Healthcare": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Healthcare API": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Life Sciences": [
+            "Medium",
+            "HVA"
+        ],
+        "Cloud Natural Language API": [
+            "Medium",
+            "HVA"
+        ],
+        "Dataproc": [
+            "Medium",
+            "HVA"
+        ],
+        "Earth Engine": [
+            "Medium",
+            "HVA"
+        ],
+        "GCP Marketplace": [
+            "Medium",
+            "HVA"
+        ],
+        "Pub/Sub": [
+            "Medium",
+            "HVA"
+        ],
+        "Resource Manager API": [
+            "Medium",
+            "HVA"
+        ],
+        "Speech-to-Text": [
+            "Medium",
+            "HVA"
+        ],
+        "Talent Solutions": [
+            "Medium",
+            "HVA"
+        ],
+        "Video Intelligence API": [
+            "Medium",
+            "HVA"
+        ],
+        "Web Risk API": [
+            "Medium",
+            "HVA"
+        ],
+        "Workflows": [
+            "Medium",
+            "HVA"
+        ]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "assessmentReport": "https://cloud.google.com/security/compliance/compliance-reports-manager",
+        "providerReference": "https://cloud.google.com/security/compliance/protected-b"
+    }
+}
