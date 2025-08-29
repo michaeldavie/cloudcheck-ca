@@ -1,0 +1,13 @@
+{
+    "name": "Snowflake",
+    "provider": "Snowflake",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Snowflake": ["Medium"]
+    },
+    "underlyingCSP": ["AWS", "Azure"],
+    "references": {
+        "providerReference": "https://www.snowflake.com/en/blog/snowflake-completes-canada-protected-b-aws-azure/"
+    }
+}
