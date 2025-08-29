@@ -1,0 +1,237 @@
+{
+    "name": "Oracle Cloud Infrastructure (OCI)",
+    "provider": "Oracle",
+    "type": "CSP",
+    "status": "assessed",
+    "servicesInScope": {
+        "APEX Application Development": [
+            "Medium"
+        ],
+        "Autonomous Data Warehouse": [
+            "Medium"
+        ],
+        "Autonomous JSON": [
+            "Medium"
+        ],
+        "Autonomous Transaction Processing": [
+            "Medium"
+        ],
+        "Big Data Cloud Service - Compute Edition": [
+            "Medium"
+        ],
+        "Big Data Service": [
+            "Medium"
+        ],
+        "Cloud Guard": [
+            "Medium"
+        ],
+        "Content and Experience": [
+            "Medium"
+        ],
+        "Data Integration Platform": [
+            "Medium"
+        ],
+        "Database Backup Service": [
+            "Medium"
+        ],
+        "Enterprise Performance Management": [
+            "Medium"
+        ],
+        "Enterprise Resource Planning Cloud Service": [
+            "Medium"
+        ],
+        "Financial Reporting Compliance": [
+            "Medium"
+        ],
+        "Functions": [
+            "Medium"
+        ],
+        "Streaming": [
+            "Medium"
+        ],
+        "Health Checks": [
+            "Medium"
+        ],
+        "Human Capital Management Payroll and Benefits": [
+            "Medium"
+        ],
+        "Integration": [
+            "Medium"
+        ],
+        "NoSQL Database": [
+            "Medium"
+        ],
+        "NoSQL Database Cloud Service (Always Free)": [
+            "Medium"
+        ],
+        "OCI Compliance Documents": [
+            "Medium"
+        ],
+        "OCI Container Engine for Kubernetes": [
+            "Medium"
+        ],
+        "OCI API Gateway": [
+            "Medium"
+        ],
+        "OCI Archive Storage": [
+            "Medium"
+        ],
+        "OCI Archive Storage (Always Free)": [
+            "Medium"
+        ],
+        "OCI Audit": [
+            "Medium"
+        ],
+        "OCI Bastion": [
+            "Medium"
+        ],
+        "OCI Cloud Guard": [
+            "Medium"
+        ],
+        "OCI Compute HPC": [
+            "Medium"
+        ],
+         "OCI Compute": [
+            "Medium"
+        ],
+        "OCI Compute GPU": [
+            "Medium"
+        ],
+        "OCI Data Catalog": [
+            "Medium"
+        ],
+        "OCI Data Integration": [
+            "Medium"
+        ],
+        "OCI Data Safe": [
+            "Medium"
+        ],
+        "OCI Data Science": [
+            "Medium"
+        ],
+        "OCI Database Management": [
+            "Medium"
+        ],
+        "OCI Database Migration": [
+            "Medium"
+        ],
+        "OCI Digital Assistant": [
+            "Medium"
+        ],
+        "OCI DNS": [
+            "Medium"
+        ],
+        "OCI Email Delivery": [
+            "Medium"
+        ],
+        "OCI Events": [
+            "Medium"
+        ],
+        "OCI FastConnect": [
+            "Medium"
+        ],
+        "OCI File Storage": [
+            "Medium"
+        ],
+        "OCI Functions": [
+            "Medium"
+        ],
+        "OCI GoldenGate": [
+            "Medium"
+        ],
+        "OCI Health Checks": [
+            "Medium"
+        ],
+        "OCI Identity and Access Management": [
+            "Medium"
+        ],
+        "OCI Java Management": [
+            "Medium"
+        ],
+        "OCI Load Balancing": [
+            "Medium"
+        ],
+        "OCI Logging": [
+            "Medium"
+        ],
+        "OCI Logging Analytics": [
+            "Medium"
+        ],
+        "OCI Management Agent": [
+            "Medium"
+        ],
+        "OCI Monitoring": [
+            "Medium"
+        ],
+        "OCI MySQL Database": [
+            "Medium"
+        ],
+        "OCI Object Storage": [
+            "Medium"
+        ],
+        "OCI Operations Insights": [
+            "Medium"
+        ],
+        "OCI Resource Manager": [
+            "Medium"
+        ],
+        "OCI Security Zones": [
+            "Medium"
+        ],
+        "OCI Storage Gateway": [
+            "Medium"
+        ],
+        "OCI to Microsoft Azure Interconnect": [
+            "Medium"
+        ],
+        "OCI Traffic Management": [
+            "Medium"
+        ],
+        "OCI Virtual Cloud Network": [
+            "Medium"
+        ],
+        "OCI Vulnerability Scanning": [
+            "Medium"
+        ],
+        "OCI Web Application Firewall": [
+            "Medium"
+        ],
+        "Order Management": [
+            "Medium"
+        ],
+        "PaaS and IaaS Universal Credit": [
+            "Medium"
+        ],
+        "Application Performance Monitoring": [
+            "Medium"
+        ],
+         "Data Flow": [
+            "Medium"
+        ],
+        "Registry": [
+            "Medium"
+        ],
+        "OCI Vault": [
+            "Medium"
+        ],
+        "Procurement Cloud": [
+            "Medium"
+        ],
+        "Product Lifecycle Management (PLM) Cloud": [
+            "Medium"
+        ],
+        "Sales and Service Cloud": [
+            "Medium"
+        ],
+        "SOA Suite Cloud Service": [
+            "Medium"
+        ],
+        "WebCenter Portal Cloud Service": [
+            "Medium"
+        ]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "providerReference": "https://hosting-services-hebergement.canada.ca/s/gc-cloud-fa-catalogue?language=en_US"
+    }
+}
