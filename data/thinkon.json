@@ -1,0 +1,27 @@
+{
+    "name": "ThinkOn",
+    "provider": "ThinkOn",
+    "type": "CSP",
+    "status": "assessed",
+    "servicesInScope": {
+        "ATIP": ["Medium"],
+        "Data Storage - Scanning and Storage": ["Medium"],
+        "Dedicated Compute": ["Medium"],
+        "Migration Appliance": ["Medium"],
+        "MS Office 365 Backup": ["Medium"],
+        "Object Storage": ["Medium"],
+        "Audit Management - TeamMate+": ["Medium"],
+        "Private Data Centre": ["Medium"],
+        "Search": ["Medium"],
+        "Veeam Cloud Connect": ["Medium"],
+        "Veeam Cloud Connect with RansomGuard": ["Medium"],
+        "Virtual Data Centre": ["Medium"],
+        "Virtual Desktop Services": ["Medium"],
+        "VMware Workspace ONE": ["Medium"]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "assessmentReport": null,
+        "providerReference": "https://hosting-services-hebergement.canada.ca/s/gc-cloud-fa-catalogue?language=en_US"
+    }
+}

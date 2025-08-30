@@ -73,6 +73,10 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.summary-stats.centered {
+    justify-content: center;
+}
+
 .stat {
     text-align: center;
 }

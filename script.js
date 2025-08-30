@@ -84,18 +84,22 @@ function createServiceCard(service) {
     const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
         `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
-    serviceCard.innerHTML = `
-        <div class="service-name">${service.name}</div>
-        ${underlyingCSPHtml}
-        <div class="summary-stats">
-            <div class="stat">
-                <span class="stat-number">${serviceCount}</span>
-                <span class="stat-label">Medium Services</span>
-            </div>
+    const hvaStatHtml = hvaSevices > 0 ? `
             <div class="stat">
                 <span class="stat-number">${hvaSevices}</span>
                 <span class="stat-label">HVA Services</span>
-            </div>
+            </div>` : '';
+
+    const summaryStatsClass = hvaSevices > 0 ? 'summary-stats' : 'summary-stats centered';
+
+    serviceCard.innerHTML = `
+        <div class="service-name">${service.name}</div>
+        ${underlyingCSPHtml}
+        <div class="${summaryStatsClass}">
+            <div class="stat">
+                <span class="stat-number">${serviceCount}</span>
+                <span class="stat-label">Medium Services</span>
+            </div>${hvaStatHtml}
         </div>
         <div class="view-details">Click to view details →</div>
     `;
