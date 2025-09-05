@@ -4,6 +4,9 @@
     "type": "CSP",
     "status": "assessed",
     "servicesInScope": {
+        "Azure Databricks": [
+            "Medium"
+        ],
         "AI Builder": [
             "Medium",
             "HVA"
