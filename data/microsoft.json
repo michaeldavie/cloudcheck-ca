@@ -820,6 +820,24 @@
         ],
         "Viva Engage": [
             "Medium"
+        ],
+        "Microsoft 365 Copilot": [
+            "Medium"
+        ],
+        "Microsoft 365 Copilot Chat": [
+            "Medium"
+        ],
+        "Viva Glint": [
+            "Medium"
+        ],
+        "Viva Goals": [
+            "Medium"
+        ],
+        "Viva Pulse": [
+            "Medium"
+        ],
+        "Whiteboard": [
+            "Medium"
         ]
     },
     "underlyingCSP": null,
