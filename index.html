@@ -1,35 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudCheck.ca - CCCS Assessed Cloud Services</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>CloudCheck.ca</h1>
-        <p>Cloud Services Assessed by CCCS (Canadian Centre for Cyber Security)</p>
-    </header>
-
-    <main>
-        <section class="search-section">
-            <input type="text" id="searchInput" placeholder="Search cloud services...">
-            <button id="backButton" class="back-button" style="display: none;">← Back to Overview</button>
-        </section>
-
-        <section class="services-section">
-            <div id="servicesList" class="services-grid">
-                <!-- Services will be populated here -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Contributions welcome on <a href="https://github.com/michaeldavie/cloudcheck-ca" target="_blank" rel="noopener">Github</a>!</p>
-        <p>Disclaimer: This data is unofficial. Current assessment status should be confirmed with providers and <a href="https://www.cyber.gc.ca/en/contact-cyber-centre" target="_blank" rel="noopener">CCCS</a>.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canada Check CA</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

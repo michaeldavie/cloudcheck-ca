@@ -1,0 +1,163 @@
+{
+    "name": "IBM Cloud",
+    "provider": "IBM",
+    "type": "CSP",
+    "status": "assessed",
+    "servicesInScope": {
+        "Fortigate Security Appliance": [
+            "Medium"
+        ],
+        "Gateway Appliance": [
+            "Medium"
+        ],
+        "Hardware Firewall": [
+            "Medium"
+        ],
+        "IBM Cloud App Configuration": [
+            "Medium"
+        ],
+        "IBM Cloud App ID": [
+            "Medium"
+        ],
+        "IBM Cloud Backup": [
+            "Medium"
+        ],
+        "IBM Cloud Bare Metal": [
+            "Medium"
+        ],
+        "IBM Cloud Bare Metal Servers for VPC": [
+            "Medium"
+        ],
+        "IBM Cloud Block Storage": [
+            "Medium"
+        ],
+        "IBM Cloud Block Storage for Virtual Private Cloud": [
+            "Medium"
+        ],
+        "IBM Cloud Block Storage Snapshots for VPC": [
+            "Medium"
+        ],
+        "IBM Cloud Code Engine": [
+            "Medium"
+        ],
+        "IBM Cloud Container Registry": [
+            "Medium"
+        ],
+        "IBM Cloud Continuous Delivery": [
+            "Medium"
+        ],
+        "IBM Cloud Databases for Elasticsearch": [
+            "Medium"
+        ],
+        "IBM Cloud Databases for MongoDB": [
+            "Medium"
+        ],
+        "IBM Cloud Databases for MySQL": [
+            "Medium"
+        ],
+        "IBM Cloud Databases for PostgreSQL": [
+            "Medium"
+        ],
+        "IBM Cloud Databases for Redis": [
+            "Medium"
+        ],
+        "IBM Cloud Direct Link": [
+            "Medium"
+        ],
+        "IBM Cloud DNS Services": [
+            "Medium"
+        ],
+        "IBM Cloud Event Notifications": [
+            "Medium"
+        ],
+        "IBM Cloud File Storage": [
+            "Medium"
+        ],
+        "IBM Cloud File Storage for Virtual Private Cloud": [
+            "Medium"
+        ],
+        "IBM Cloud Flow Logs for VPC": [
+            "Medium"
+        ],
+        "IBM Cloud Hardware Security Module": [
+            "Medium"
+        ],
+        "IBM Cloud Kubernetes Service and Red Hat® OpenShift® on IBM Cloud": [
+            "Medium"
+        ],
+        "IBM Cloud Load Balancer": [
+            "Medium"
+        ],
+        "IBM Cloud Messages for RabbitMQ": [
+            "Medium"
+        ],
+        "IBM Cloud Monitoring": [
+            "Medium"
+        ],
+        "IBM Cloud Object Storage": [
+            "Medium"
+        ],
+        "IBM Cloud Object Storage (IaaS)": [
+            "Medium"
+        ],
+        "IBM Cloud Platform - Core Services (Account Management and Billing, Console, Global Catalog, Global Search and Tagging, Identity and Access Management, and Shell)": [
+            "Medium"
+        ],
+        "IBM Cloud Satellite": [
+            "Medium"
+        ],
+        "IBM Cloud Schematics": [
+            "Medium"
+        ],
+        "IBM Cloud Secrets Manager": [
+            "Medium"
+        ],
+        "IBM Cloud Security and Compliance Center": [
+            "Medium"
+        ],
+        "IBM Cloud Transit Gateway": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Private Cloud": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Private Cloud - IBM Cloud VPN for VPC: Client-to-Site Server": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Private Cloud - VPN for VPC: Site-to-Site Gateway": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Private Endpoint for VPC": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Servers": [
+            "Medium"
+        ],
+        "IBM Cloud Virtual Servers for VPC: Auto Scale for VPC and Dedicated Host for VPC": [
+            "Medium"
+        ],
+        "IBM Cloudant Dedicated Cluster": [
+            "Medium"
+        ],
+        "IBM Cloudant for IBM Cloud": [
+            "Medium"
+        ],
+        "IBM Event Streams for IBM Cloud (Enterprise)": [
+            "Medium"
+        ],
+        "IBM Event Streams for IBM Cloud (Standard)": [
+            "Medium"
+        ],
+        "IBM Key Protect for IBM Cloud": [
+            "Medium"
+        ],
+        "IBM Power Virtual Server on IBM Cloud": [
+            "Medium"
+        ]
+    },
+    "underlyingCSP": null,
+    "references": {
+        "assessmentReport": null,
+        "providerReference": "https://www.ibm.com/cloud/compliance/protected-b"
+    }
+}

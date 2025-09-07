@@ -1,5 +1,3 @@
-# CloudCheck.ca
+### Cloud Services Assessed by CCCS (Canadian Centre for Cyber Security)
 
-A static website listing cloud services assessed by CCCS (Canadian Centre for Cyber Security).
-
-Available at https://cloudcheck.ca
+https://cloudcheck-react-app-fuzzy-search.vercel.app/
