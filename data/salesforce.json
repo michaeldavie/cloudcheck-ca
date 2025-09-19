@@ -4,18 +4,16 @@
     "type": "SaaS",
     "status": "assessed",
     "servicesInScope": {
-        "Agentforce & Einstein Platform": ["Medium"],
+        "Agentforce": ["Medium"],
         "Data Cloud": ["Medium"],
-        "Marketing Cloud - Engagement (Hyperforce)": ["Medium"],
-        "Marketing Cloud - Growth": ["Medium"],
-        "Marketing Cloud - Intelligence": ["Medium"],
-        "MuleSoft": ["Medium"],
-        "Salesforce Services (Hyperforce)": ["Medium"],
-        "Tableau Cloud": ["Medium"]
+        "Marketing Cloud": ["Medium"],
+        "MuleSoft on Hyperforce": ["Medium"],
+        "Salesforce Services": ["Medium"],
+        "Tableau Cloud (including Tableau on Hyperforce)": ["Medium"]
     },
     "underlyingCSP": ["AWS"],
     "references": {
         "assessmentReport": null,
-        "providerReference": "https://compliance.salesforce.com/en/cccs-assessment"
+        "providerReference": "https://www.salesforce.com/ca/blog/salesforce-achieves-canada-protected-b-moderate-for-key-cloud-solutions-expanding-support-for-government-innovation/?blaid=7830383"
     }
 }
