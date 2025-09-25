@@ -10,7 +10,7 @@
         "Amazon Athena": ["Medium", "HVA"],
         "Amazon Augmented AI": ["Medium", "HVA"],
         "Amazon Aurora": ["Medium", "HVA"],
-        "Amazon Bedrock": ["Medium"],
+        "Amazon Bedrock": ["Medium", "HVA"],
         "Amazon Chime": ["Medium", "HVA"],
         "Amazon Chime SDK": ["Medium", "HVA"],
         "Amazon Cloud Directory": ["Medium", "HVA"],
