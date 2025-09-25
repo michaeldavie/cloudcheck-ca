@@ -153,7 +153,19 @@
         "AWS Wickr": ["Medium", "HVA"],
         "AWS X-Ray": ["Medium", "HVA"],
         "EC2 Image Builder": ["Medium", "HVA"],
-        "Elastic Load Balancing": ["Medium", "HVA"]
+        "Elastic Load Balancing": ["Medium", "HVA"],
+        "Amazon DataZone": ["Medium"],
+        "Amazon Security Lake": ["Medium"],
+        "AWS Verified Access": ["Medium"],
+        "Amazon Route 53 Resolver": ["Medium"],
+        "AWS Glue DataBrew": ["Medium"],
+        "AWS Managed Services": ["Medium"],
+        "AWS Serverless Application Repository": ["Medium"],
+        "Amazon WorkSpaces Thin Client": ["Medium"],
+        "Amazon CloudWatch Logs": ["Medium"],
+        "AWS TimeStream": ["Medium"],
+        "AWS User Notifications": ["Medium"],
+        "AWS Artifact": ["Medium"]
     },
     "underlyingCSP": null,
     "references": {
