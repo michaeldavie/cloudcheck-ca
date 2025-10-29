@@ -1,0 +1,13 @@
+{
+    "name": "Thrive Health",
+    "provider": "Thrive Health",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Thrive Health": ["Medium"]
+    },
+    "underlyingCSP": ["AWS"],
+    "references": {
+        "providerReference": "https://hosting-services-hebergement.canada.ca/s/gc-saas-method-of-supply-catalogue?language=en_US"
+    }
+}

@@ -1,6 +1,7 @@
 [
     "aws",
     "appian",
+    "gambit-id",
     "google",
     "ibm",
     "microsoft",
@@ -13,5 +14,7 @@
     "servicenow",
     "snowflake",
     "tanium",
-    "thinkon"
+    "thinkon",
+    "thrive",
+    "vidcruiter"
 ]

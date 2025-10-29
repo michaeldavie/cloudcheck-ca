@@ -1,0 +1,13 @@
+{
+    "name": "VidCruiter",
+    "provider": "VidCruiter",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "VidCruiter": ["Medium"]
+    },
+    "underlyingCSP": ["AWS"],
+    "references": {
+        "providerReference": "https://hosting-services-hebergement.canada.ca/s/gc-saas-method-of-supply-catalogue?language=en_US"
+    }
+}

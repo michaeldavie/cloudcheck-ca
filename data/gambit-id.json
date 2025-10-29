@@ -1,0 +1,13 @@
+{
+    "name": "Gambit ID",
+    "provider": "Gambit ID",
+    "type": "SaaS",
+    "status": "assessed",
+    "servicesInScope": {
+        "Gambit ID Check": ["Medium"]
+    },
+    "underlyingCSP": ["AWS"],
+    "references": {
+        "providerReference": "https://www.gambitidcheck.com/"
+    }
+}
