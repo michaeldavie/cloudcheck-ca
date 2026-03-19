@@ -4,14 +4,16 @@
     "type": "SaaS",
     "status": "assessed",
     "servicesInScope": {
-        "SAP Business Technology Platform": ["Medium"],
-        "SAP Data Custodian (AWS only)": ["Medium"]
+        "SAP S/4HANA Private Cloud Edition": ["Medium", "HVA"],
+        "SAP Business Technology Platform": ["Medium", "HVA"],
+        "SAP Analytics Cloud": ["Medium", "HVA"],
+        "SAP Integrated Business Planning": ["Medium", "HVA"],
+        "SAP Fieldglass": ["Medium", "HVA"]
     },
-    "underlyingCSP": ["AWS", "Azure"],
+    "underlyingCSP": ["AWS"],
     "references": {
         "providerReference": [
-            "https://www.sap.com/croatia/about/trust-center/certification-compliance/sap-business-technology-platform-canadian-centre-for-cyber-secur.html",
-            "https://www.sap.com/about/trust-center/certification-compliance/sap-data-custodian-canadian-centre-for-cyber-security--cccs--clo.html"
-    ]
+            "https://news.sap.com/canada/2026/03/sap-strengthens-compliance-in-canada-with-canadian-centre-for-cyber-security-cccs-cloud-assessments-of-sap-sovereign-cloud-for-canada/"
+        ]
     }
 }
