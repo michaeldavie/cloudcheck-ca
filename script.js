@@ -74,6 +74,7 @@ function renderSummaryView() {
 
 function createServiceCard(service) {
     const serviceCount = Object.keys(service.servicesInScope).length;
+    const highServices = Object.values(service.servicesInScope).filter(levels => levels.includes('High')).length;
     const hvaSevices = Object.values(service.servicesInScope).filter(levels => levels.includes('HVA')).length;
 
     const serviceCard = document.createElement('div');
@@ -84,13 +85,19 @@ function createServiceCard(service) {
     const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
         `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
+    const highStatHtml = highServices > 0 ? `
+            <div class="stat">
+                <span class="stat-number">${highServices}</span>
+                <span class="stat-label">High Services</span>
+            </div>` : '';
+
     const hvaStatHtml = hvaSevices > 0 ? `
             <div class="stat">
                 <span class="stat-number">${hvaSevices}</span>
                 <span class="stat-label">HVA Services</span>
             </div>` : '';
 
-    const summaryStatsClass = hvaSevices > 0 ? 'summary-stats' : 'summary-stats centered';
+    const summaryStatsClass = highServices > 0 || hvaSevices > 0 ? 'summary-stats' : 'summary-stats centered';
 
     serviceCard.innerHTML = `
         <div class="service-name">${service.name}</div>
@@ -99,7 +106,7 @@ function createServiceCard(service) {
             <div class="stat">
                 <span class="stat-number">${serviceCount}</span>
                 <span class="stat-label">Medium Services</span>
-            </div>${hvaStatHtml}
+            </div>${highStatHtml}${hvaStatHtml}
         </div>
         <div class="view-details">Click to view details →</div>
     `;
@@ -134,10 +141,12 @@ function renderDetailedService(service) {
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([serviceName, levels]) => {
             const hasMedium = levels.includes('Medium') ? '✓' : '';
+            const hasHigh = levels.includes('High') ? '✓' : '';
             const hasHVA = levels.includes('HVA') ? '✓' : '';
             return `<tr>
                 <td>${serviceName}</td>
                 <td>${hasMedium}</td>
+                <td>${hasHigh}</td>
                 <td>${hasHVA}</td>
             </tr>`;
         }).join('');
@@ -174,6 +183,7 @@ function renderDetailedService(service) {
                     <tr>
                         <th>Service</th>
                         <th>Medium</th>
+                        <th>High</th>
                         <th>HVA</th>
                     </tr>
                 </thead>
@@ -261,10 +271,12 @@ function renderFilteredDetail(service, searchTerm) {
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([serviceName, levels]) => {
             const hasMedium = levels.includes('Medium') ? '✓' : '';
+            const hasHigh = levels.includes('High') ? '✓' : '';
             const hasHVA = levels.includes('HVA') ? '✓' : '';
             return `<tr>
                 <td>${serviceName}</td>
                 <td>${hasMedium}</td>
+                <td>${hasHigh}</td>
                 <td>${hasHVA}</td>
             </tr>`;
         }).join('');
@@ -301,6 +313,7 @@ function renderFilteredDetail(service, searchTerm) {
                     <tr>
                         <th>Service</th>
                         <th>Medium</th>
+                        <th>High</th>
                         <th>HVA</th>
                     </tr>
                 </thead>

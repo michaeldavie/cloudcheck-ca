@@ -36,7 +36,7 @@ This is a static website served directly from files:
 - `provider`: Company name (e.g., "Amazon") 
 - `type`: Either "CSP" (Cloud Service Provider) or "SaaS" (Software as a Service)
 - `underlyingCSP`: Array of CSPs that SaaS providers use (optional)
-- `servicesInScope`: Object mapping service names to assessment levels (["Medium"], ["HVA"], or ["Medium", "HVA"])
+- `servicesInScope`: Object mapping service names to assessment levels, any combination of "Medium" (Cloud Medium), "High" (Cloud High, which includes Cloud Medium) and "HVA" (e.g. ["Medium"], ["Medium", "HVA"], ["Medium", "High"])
 - `references`: Optional object with `assessmentReport` and `providerReference` URLs
 
 ### JavaScript Architecture
@@ -53,8 +53,8 @@ This is a static website served directly from files:
 - `selectedService`: Currently viewed provider in detail mode
 
 **UI Components:**
-- Provider cards show service counts (Medium vs HVA services)
-- Detail view shows sortable table of services with Medium/HVA checkmarks  
+- Provider cards show service counts (Medium, High and HVA services)
+- Detail view shows sortable table of services with Medium/High/HVA checkmarks  
 - Search filters providers by name in summary, services by name in detail
 - Back button returns from detail to summary view
 
