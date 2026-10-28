@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>CloudCheck.ca - CCCS Assessed Cloud Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,7 +17,7 @@
     <main>
         <section class="search-section">
             <input type="text" id="searchInput" placeholder="Search cloud services...">
-            <button id="backButton" class="back-button" style="display: none;">← Back to Overview</button>
+            <button id="backButton" class="back-button" hidden>← Back to Overview</button>
         </section>
 
         <section class="services-section">

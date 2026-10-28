@@ -2,6 +2,26 @@ let cloudServices = [];
 let currentView = 'summary'; // 'summary' or 'detail'
 let selectedService = null;
 
+// Provider data comes from contributed JSON files, so treat every value as untrusted text
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+// Only allow absolute https links; anything else (javascript:, data:, relative) is dropped
+function safeUrl(value) {
+    try {
+        const url = new URL(value);
+        return url.protocol === 'https:' ? url.href : null;
+    } catch {
+        return null;
+    }
+}
+
 async function loadProviderData() {
     try {
         const cacheBuster = `?v=${Date.now()}`;
@@ -9,7 +29,7 @@ async function loadProviderData() {
         const providerFiles = await response.json();
 
         const promises = providerFiles.map(async (file) => {
-            const providerResponse = await fetch(`./data/${file}.json${cacheBuster}`);
+            const providerResponse = await fetch(`./data/${encodeURIComponent(file)}.json${cacheBuster}`);
             return await providerResponse.json();
         });
 
@@ -23,53 +43,35 @@ async function loadProviderData() {
 
 function renderSummaryView() {
     currentView = 'summary';
-    const servicesList = document.getElementById('servicesList');
     const backButton = document.getElementById('backButton');
     const searchInput = document.getElementById('searchInput');
 
-    backButton.style.display = 'none';
+    backButton.hidden = true;
     searchInput.placeholder = 'Search cloud providers...';
-    servicesList.innerHTML = '';
 
-    // Separate providers by type
-    const cspProviders = cloudServices.filter(service => service.type === 'CSP');
-    const saasProviders = cloudServices.filter(service => service.type === 'SaaS');
+    renderFilteredSummary(cloudServices);
+}
 
-    // Create CSP section
-    if (cspProviders.length > 0) {
-        const cspSection = document.createElement('div');
-        cspSection.className = 'provider-category';
-        cspSection.innerHTML = '<h2 class="category-title">Cloud Service Providers (CSPs)</h2>';
+function createCategorySection(title, providers) {
+    const section = document.createElement('div');
+    section.className = 'provider-category';
+    section.innerHTML = `<h2 class="category-title">${title}</h2>`;
 
-        const cspGrid = document.createElement('div');
-        cspGrid.className = 'services-grid';
+    const grid = document.createElement('div');
+    grid.className = 'services-grid';
 
-        cspProviders.forEach(service => {
-            const serviceCard = createServiceCard(service);
-            cspGrid.appendChild(serviceCard);
-        });
+    providers.forEach(service => {
+        grid.appendChild(createServiceCard(service));
+    });
 
-        cspSection.appendChild(cspGrid);
-        servicesList.appendChild(cspSection);
-    }
+    section.appendChild(grid);
+    return section;
+}
 
-    // Create SaaS section
-    if (saasProviders.length > 0) {
-        const saasSection = document.createElement('div');
-        saasSection.className = 'provider-category';
-        saasSection.innerHTML = '<h2 class="category-title">Software as a Service (SaaS) Providers</h2>';
-
-        const saasGrid = document.createElement('div');
-        saasGrid.className = 'services-grid';
-
-        saasProviders.forEach(service => {
-            const serviceCard = createServiceCard(service);
-            saasGrid.appendChild(serviceCard);
-        });
-
-        saasSection.appendChild(saasGrid);
-        servicesList.appendChild(saasSection);
-    }
+function underlyingCSPHtml(service) {
+    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
+    return service.underlyingCSP && service.underlyingCSP.length > 0 ?
+        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.map(escapeHtml).join(', ')}</div>` : '';
 }
 
 function createServiceCard(service) {
@@ -80,10 +82,6 @@ function createServiceCard(service) {
     const serviceCard = document.createElement('div');
     serviceCard.className = 'service-card summary-card';
     serviceCard.onclick = () => showDetailView(service);
-
-    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
-    const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
 
     const highStatHtml = highServices > 0 ? `
             <div class="stat">
@@ -100,8 +98,8 @@ function createServiceCard(service) {
     const summaryStatsClass = highServices > 0 || hvaSevices > 0 ? 'summary-stats' : 'summary-stats centered';
 
     serviceCard.innerHTML = `
-        <div class="service-name">${service.name}</div>
-        ${underlyingCSPHtml}
+        <div class="service-name">${escapeHtml(service.name)}</div>
+        ${underlyingCSPHtml(service)}
         <div class="${summaryStatsClass}">
             <div class="stat">
                 <span class="stat-number">${serviceCount}</span>
@@ -117,84 +115,44 @@ function createServiceCard(service) {
 function showDetailView(service) {
     currentView = 'detail';
     selectedService = service;
-    const servicesList = document.getElementById('servicesList');
     const backButton = document.getElementById('backButton');
     const searchInput = document.getElementById('searchInput');
 
-    backButton.style.display = 'inline-block';
+    backButton.hidden = false;
     searchInput.placeholder = `Search ${service.name} services...`;
-    servicesList.innerHTML = '';
 
-    renderDetailedService(service);
+    renderFilteredDetail(service, '');
 }
 
-function renderDetailedService(service) {
-    const servicesList = document.getElementById('servicesList');
-    const serviceCard = document.createElement('div');
-    serviceCard.className = 'service-card detailed-card';
+function referencesHtml(service) {
+    if (!service.references) {
+        return '';
+    }
 
-    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
-    const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
-
-    const tableRows = Object.entries(service.servicesInScope)
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([serviceName, levels]) => {
-            const hasMedium = levels.includes('Medium') ? '✓' : '';
-            const hasHigh = levels.includes('High') ? '✓' : '';
-            const hasHVA = levels.includes('HVA') ? '✓' : '';
-            return `<tr>
-                <td>${serviceName}</td>
-                <td>${hasMedium}</td>
-                <td>${hasHigh}</td>
-                <td>${hasHVA}</td>
-            </tr>`;
-        }).join('');
-
-    let referencesHtml = '';
-    if (service.references) {
-        const links = [];
-        if (service.references.assessmentReport) {
-            links.push(`<a href="${service.references.assessmentReport}" target="_blank" rel="noopener">Assessment Report</a>`);
+    const links = [];
+    const addLink = (href, label) => {
+        const url = safeUrl(href);
+        if (url) {
+            links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`);
         }
-        if (service.references.providerReference) {
-            if (Array.isArray(service.references.providerReference)) {
-                service.references.providerReference.forEach((link, index) => {
-                    links.push(`<a href="${link}" target="_blank" rel="noopener">Provider Reference ${index + 1}</a>`);
-                });
-            } else {
-                links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
-            }
-        }
-        if (links.length > 0) {
-            referencesHtml = `<div class="references">
-                <strong>References:</strong> ${links.join(' | ')}
-            </div>`;
+    };
+
+    if (service.references.assessmentReport) {
+        addLink(service.references.assessmentReport, 'Assessment Report');
+    }
+    if (service.references.providerReference) {
+        if (Array.isArray(service.references.providerReference)) {
+            service.references.providerReference.forEach((link, index) => {
+                addLink(link, `Provider Reference ${index + 1}`);
+            });
+        } else {
+            addLink(service.references.providerReference, 'Provider Reference');
         }
     }
 
-    serviceCard.innerHTML = `
-        <div class="service-name">${service.name}</div>
-        ${underlyingCSPHtml}
-        ${referencesHtml}
-        <div class="services-table-container">
-            <table class="services-table">
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Medium</th>
-                        <th>High</th>
-                        <th>HVA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${tableRows}
-                </tbody>
-            </table>
-        </div>
-    `;
-
-    servicesList.appendChild(serviceCard);
+    return links.length > 0 ? `<div class="references">
+                <strong>References:</strong> ${links.join(' | ')}
+            </div>` : '';
 }
 
 function filterServices(searchTerm) {
@@ -213,44 +171,16 @@ function renderFilteredSummary(services) {
     const servicesList = document.getElementById('servicesList');
     servicesList.innerHTML = '';
 
-    // Separate filtered providers by type
+    // Separate providers by type
     const cspProviders = services.filter(service => service.type === 'CSP');
     const saasProviders = services.filter(service => service.type === 'SaaS');
 
-    // Create CSP section if there are filtered CSP providers
     if (cspProviders.length > 0) {
-        const cspSection = document.createElement('div');
-        cspSection.className = 'provider-category';
-        cspSection.innerHTML = '<h2 class="category-title">Cloud Service Providers (CSPs)</h2>';
-
-        const cspGrid = document.createElement('div');
-        cspGrid.className = 'services-grid';
-
-        cspProviders.forEach(service => {
-            const serviceCard = createServiceCard(service);
-            cspGrid.appendChild(serviceCard);
-        });
-
-        cspSection.appendChild(cspGrid);
-        servicesList.appendChild(cspSection);
+        servicesList.appendChild(createCategorySection('Cloud Service Providers (CSPs)', cspProviders));
     }
 
-    // Create SaaS section if there are filtered SaaS providers
     if (saasProviders.length > 0) {
-        const saasSection = document.createElement('div');
-        saasSection.className = 'provider-category';
-        saasSection.innerHTML = '<h2 class="category-title">Software as a Service (SaaS) Providers</h2>';
-
-        const saasGrid = document.createElement('div');
-        saasGrid.className = 'services-grid';
-
-        saasProviders.forEach(service => {
-            const serviceCard = createServiceCard(service);
-            saasGrid.appendChild(serviceCard);
-        });
-
-        saasSection.appendChild(saasGrid);
-        servicesList.appendChild(saasSection);
+        servicesList.appendChild(createCategorySection('Software as a Service (SaaS) Providers', saasProviders));
     }
 }
 
@@ -263,10 +193,6 @@ function renderFilteredDetail(service, searchTerm) {
     const serviceCard = document.createElement('div');
     serviceCard.className = 'service-card detailed-card';
 
-    const cspLabel = service.type === 'SaaS' ? 'CSP(s)' : 'Underlying CSP';
-    const underlyingCSPHtml = service.underlyingCSP && service.underlyingCSP.length > 0 ?
-        `<div class="underlying-csp">${cspLabel}: ${service.underlyingCSP.join(', ')}</div>` : '';
-
     const tableRows = filtered
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([serviceName, levels]) => {
@@ -274,39 +200,17 @@ function renderFilteredDetail(service, searchTerm) {
             const hasHigh = levels.includes('High') ? '✓' : '';
             const hasHVA = levels.includes('HVA') ? '✓' : '';
             return `<tr>
-                <td>${serviceName}</td>
+                <td>${escapeHtml(serviceName)}</td>
                 <td>${hasMedium}</td>
                 <td>${hasHigh}</td>
                 <td>${hasHVA}</td>
             </tr>`;
         }).join('');
 
-    let referencesHtml = '';
-    if (service.references) {
-        const links = [];
-        if (service.references.assessmentReport) {
-            links.push(`<a href="${service.references.assessmentReport}" target="_blank" rel="noopener">Assessment Report</a>`);
-        }
-        if (service.references.providerReference) {
-            if (Array.isArray(service.references.providerReference)) {
-                service.references.providerReference.forEach((link, index) => {
-                    links.push(`<a href="${link}" target="_blank" rel="noopener">Provider Reference ${index + 1}</a>`);
-                });
-            } else {
-                links.push(`<a href="${service.references.providerReference}" target="_blank" rel="noopener">Provider Reference</a>`);
-            }
-        }
-        if (links.length > 0) {
-            referencesHtml = `<div class="references">
-                <strong>References:</strong> ${links.join(' | ')}
-            </div>`;
-        }
-    }
-
     serviceCard.innerHTML = `
-        <div class="service-name">${service.name}</div>
-        ${underlyingCSPHtml}
-        ${referencesHtml}
+        <div class="service-name">${escapeHtml(service.name)}</div>
+        ${underlyingCSPHtml(service)}
+        ${referencesHtml(service)}
         <div class="services-table-container">
             <table class="services-table">
                 <thead>
